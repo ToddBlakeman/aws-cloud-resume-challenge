@@ -1,0 +1,411 @@
+/* ------------------------- Main Body Styles ------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #fff;
+    overflow-x: hidden; /* or overflow-x: auto; */
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+a {
+text-decoration: none;
+}
+
+/* ------------------------- Navbar Styles ------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #597445;
+    color: #E7F0DC;
+    width: 100%; /* Stretch across the full width */
+    box-sizing: border-box; /* Include padding in the width */
+    margin: 0; /* Remove margin */
+}
+
+.navbar a {
+    color: #E7F0DC;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.7s;
+    border-radius: 25px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 25px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 1rem;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.4s ease-in-out;
+    border-radius: 25px;
+}
+
+
+
+/* ------------------------- Off Screen Menu ------------------------- */
+.off-screen-menu {
+    background-color: #597445;
+    height: 30vh;
+    width: 100%;
+    max-width: 700px;
+    position: fixed;
+    top: 0;
+    right: -700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.4s ease;
+}
+
+.off-screen-menu-list li {
+    color: #E7F0DC;
+    font-size: 1rem;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.7s;
+    border-radius: 25px;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+
+
+/* ------------------------- Responsive Styles ------------------------- */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute; /* Ensure it is positioned correctly */
+        top: 100%; /* Position it below the navbar */
+        right: 0; /* Align to the right edge of the navbar */
+        background-color: white; /* Background color for visibility */
+        width: 200px; /* Adjust width as needed */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Add shadow for better visibility */
+        z-index: 9; /* Ensure it appears below the hamburger icon */
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        position: relative; /* Ensure positioning is relative */
+        z-index: 10; /* Ensure the hamburger is on top */
+    }
+
+    .hamburger.active + .nav-menu {
+        display: block;
+    }
+
+    .nav-menu, .hamburger {
+        width: auto;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu li {
+        margin: 0;
+        text-align: center;
+        padding: 1rem 0;
+        text-decoration: none; /* Remove underline from links */
+        color: #333; /* Text color */
+    }
+
+    .nav-menu li a:hover {
+        color: #007BFF; /* Change color on hover for better UX */
+    }
+
+    .bar {
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Optional: Style for the hamburger bars */
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 2px auto;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    /* Optional: Transformations for the active state */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Transition for a smoother effect */
+    .nav-menu, .hamburger .bar {
+        transition: all 0.5s ease;
+    }
+}
+
+
+
+/* ------------------------- Main Content Styles ------------------------- */
+
+.wrapper {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.main-title {
+    border-bottom-width: 15px;
+    margin-bottom: 0px;
+}
+
+.border {
+    max-width: 50%;
+    margin-left: 25%;
+    align-self: center;
+    border-bottom: 1px black solid;
+}
+
+.line {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding-bottom: 2%;
+    border-top: 1px black solid;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.img-me {
+    border-radius: 50%;
+    width: 275px;
+    height: 275px;
+    margin-top: 2%;
+}
+
+.counter-number {
+    display: flex;
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 1.2rem;
+}
+
+.counter-digits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.digit {
+    position: relative;
+    width: 40px;
+    height: 60px;
+    perspective: 1000px;
+    margin: 0 3px;
+}
+
+.digit .top, .digit .bottom {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background: #597445;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    backface-visibility: hidden;
+}
+
+.digit .top {
+    transform-origin: bottom;
+}
+
+.digit .bottom {
+    border-top: none;
+    transform-origin: top;
+    transform: rotateX(180deg);
+}
+
+.digit.flip .top {
+    animation: flipTop 0.1s forwards;
+}
+
+.digit.flip .bottom {
+    animation: flipBottom 0.1s forwards;
+}
+
+@keyframes flipTop {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(-180deg); }
+}
+
+@keyframes flipBottom {
+    0% { transform: rotateX(180deg); }
+    100% { transform: rotateX(0deg); }
+}
+
+.page-view-count {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.profile {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact {
+    margin-bottom: 20px;
+}
+
+.skills {
+    margin-bottom: 20px;
+}
+
+.achievements {
+    margin-bottom: 20px;
+}
+
+.experience {
+    margin-bottom: 20px;
+}
+
+.education {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.job-title {
+    font-weight: bold;
+}
+
+.job-period {
+    font-style: italic;
+}
+
+.footer {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 2%;
+    align-items: center;
+}
+
+.contact {
+    max-width: 80%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+span a {
+    border: 0px;
+}
+
+.email-link img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+}
+
+.hover-phone {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+    transition: width 0.3s ease, height 0.3s ease, background-image 0.3s ease;
+}
+
+.hover-phone:hover {
+    width: 100px;
+    height: 50px;
+}
+
+.location img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+}
+
+.hover-address {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+    transition: width 0.3s ease, height 0.3s ease, background-image 0.3s ease;
+}
+
+.hover-address:hover {
+    width: 125px;
+    height: 50px;
+}
+
+.linkedin img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+}
+
+.github img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+}
