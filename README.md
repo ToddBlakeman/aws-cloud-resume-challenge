@@ -13,5 +13,6 @@ Teck-stack:
 - AWS Lambda
 - DynamoDB
 
-## Link to Resume Challenge website
-https://www.toddblakeman.co.uk/
+## Links for Cloud Resume Challenge
+- My cloud resume challenge: https://www.toddblakeman.co.uk/
+- The original cloud resume challenge: https://cloudresumechallenge.dev/docs/the-challenge/aws/
