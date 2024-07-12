@@ -30,54 +30,54 @@ resource "aws_iam_role" "lamba_role" {
 }
 
 resource "aws_iam_policy" "iam_policy_for_lambda_role" {
-  name = "aws_iam_policy_for_lambda_role"
-  path = "/"
+  name        = "aws_iam_policy_for_lambda_role"
+  path        = "/"
   description = "AWS IAM Policy for the lambda_role"
-    policy = jsonencode(
+  policy = jsonencode(
     {
-    "Version": "2012-10-17",
-    "Statement": [
+      "Version" : "2012-10-17",
+      "Statement" : [
         {
-            "Sid": "ReadWriteTable",
-            "Effect": "Allow",
-            "Action": [
-                "dynamodb:BatchGetItem",
-                "dynamodb:GetItem",
-                "dynamodb:Query",
-                "dynamodb:Scan",
-                "dynamodb:BatchWriteItem",
-                "dynamodb:PutItem",
-                "dynamodb:UpdateItem"
-            ],
-            "Resource": "arn:aws:dynamodb:*:*:table/view-count-ddb"
+          "Sid" : "ReadWriteTable",
+          "Effect" : "Allow",
+          "Action" : [
+            "dynamodb:BatchGetItem",
+            "dynamodb:GetItem",
+            "dynamodb:Query",
+            "dynamodb:Scan",
+            "dynamodb:BatchWriteItem",
+            "dynamodb:PutItem",
+            "dynamodb:UpdateItem"
+          ],
+          "Resource" : "arn:aws:dynamodb:*:*:table/view-count-ddb"
         },
         {
-            "Sid": "GetStreamRecords",
-            "Effect": "Allow",
-            "Action": "dynamodb:GetRecords",
-            "Resource": "arn:aws:dynamodb:*:*:table/view-count-ddb/stream/* "
+          "Sid" : "GetStreamRecords",
+          "Effect" : "Allow",
+          "Action" : "dynamodb:GetRecords",
+          "Resource" : "arn:aws:dynamodb:*:*:table/view-count-ddb/stream/* "
         },
         {
-            "Sid": "WriteLogStreamsAndGroups",
-            "Effect": "Allow",
-            "Action": [
-                "logs:CreateLogStream",
-                "logs:PutLogEvents"
-            ],
-            "Resource": "*"
+          "Sid" : "WriteLogStreamsAndGroups",
+          "Effect" : "Allow",
+          "Action" : [
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          "Resource" : "*"
         },
         {
-            "Sid": "CreateLogGroup",
-            "Effect": "Allow",
-            "Action": "logs:CreateLogGroup",
-            "Resource": "*"
+          "Sid" : "CreateLogGroup",
+          "Effect" : "Allow",
+          "Action" : "logs:CreateLogGroup",
+          "Resource" : "*"
         }
-    ]
+      ]
   })
 }
 
 resource "aws_iam_role_policy_attachment" "attach_iam_policy_for_lambda_role_to_lambda_role" {
-  role = aws_iam_role.lamba_role.name
+  role       = aws_iam_role.lamba_role.name
   policy_arn = aws_iam_policy.iam_policy_for_lambda_role.arn
 }
 
