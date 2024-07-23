@@ -4,7 +4,7 @@ This is my version of the AWS Cloud Resume Challenge. What is the Cloud Resume C
 ## Architecture
 Below is a diagram detailing the architecture I have utilised in this project:
 
-![Project Architecture](./resume-arch.drawio (2).png)
+![Project Architecture](./resume-arch.drawio.png)
 
 Teck-stack:
 - S3
