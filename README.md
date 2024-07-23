@@ -12,6 +12,8 @@ Teck-stack:
 - Certificate Manager
 - AWS Lambda
 - DynamoDB
+- Terraform
+- Github Actions
 
 ## Links for Cloud Resume Challenge
 - My cloud resume challenge: https://www.toddblakeman.co.uk/
