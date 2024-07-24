@@ -4,7 +4,7 @@ This is my version of the AWS Cloud Resume Challenge. What is the Cloud Resume C
 ## Architecture
 Below is a diagram detailing the architecture I have utilised in this project:
 
-*IMG HERE*
+![Project Architecture](./resume-arch.drawio.png)
 
 Teck-stack:
 - S3
@@ -12,3 +12,9 @@ Teck-stack:
 - Certificate Manager
 - AWS Lambda
 - DynamoDB
+- Terraform
+- Github Actions
+
+## Links for Cloud Resume Challenge
+- My cloud resume challenge: https://www.toddblakeman.co.uk/
+- The original cloud resume challenge: https://cloudresumechallenge.dev/docs/the-challenge/aws/
