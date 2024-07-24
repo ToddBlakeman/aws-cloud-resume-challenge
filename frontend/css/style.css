@@ -11,8 +11,8 @@ body {
     margin: 0;
     padding: 0;
     color: black;
-    background-color: #fff;
-    overflow-x: hidden; /* or overflow-x: auto; */
+    background-color: #E7F0DC;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -26,14 +26,14 @@ text-decoration: none;
 /* ------------------------- Navbar Styles ------------------------- */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0.5rem;
     background-color: #597445;
     color: #E7F0DC;
-    width: 100%; /* Stretch across the full width */
-    box-sizing: border-box; /* Include padding in the width */
-    margin: 0; /* Remove margin */
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .navbar a {
@@ -116,13 +116,13 @@ text-decoration: none;
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
-        position: absolute; /* Ensure it is positioned correctly */
-        top: 100%; /* Position it below the navbar */
-        right: 0; /* Align to the right edge of the navbar */
-        background-color: white; /* Background color for visibility */
-        width: 200px; /* Adjust width as needed */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Add shadow for better visibility */
-        z-index: 9; /* Ensure it appears below the hamburger icon */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 9;
     }
 
     .nav-menu.active {
@@ -132,8 +132,8 @@ text-decoration: none;
     .hamburger {
         display: flex;
         cursor: pointer;
-        position: relative; /* Ensure positioning is relative */
-        z-index: 10; /* Ensure the hamburger is on top */
+        position: relative;
+        z-index: 10;
     }
 
     .hamburger.active + .nav-menu {
@@ -149,12 +149,12 @@ text-decoration: none;
         margin: 0;
         text-align: center;
         padding: 1rem 0;
-        text-decoration: none; /* Remove underline from links */
-        color: #333; /* Text color */
+        text-decoration: none;
+        color: #333;
     }
 
     .nav-menu li a:hover {
-        color: #007BFF; /* Change color on hover for better UX */
+        color: #007BFF;
     }
 
     .bar {
@@ -206,6 +206,7 @@ text-decoration: none;
 .main-title {
     border-bottom-width: 15px;
     margin-bottom: 0px;
+    height: 100vh;
 }
 
 .border {
@@ -230,8 +231,8 @@ text-decoration: none;
 
 .img-me {
     border-radius: 50%;
-    width: 275px;
-    height: 275px;
+    width: 35%;
+    height: 35%;
     margin-top: 2%;
 }
 
@@ -239,6 +240,7 @@ text-decoration: none;
     display: flex;
     text-align: center;
     margin-bottom: 2%;
+    margin-top: 2%;
     font-size: 1.2rem;
 }
 
@@ -303,6 +305,29 @@ text-decoration: none;
     margin-top: 0px;
 }
 
+.scroll-down {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.scroll-down-img {
+    height: 25px;
+    width: 25px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
 .profile {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -316,7 +341,7 @@ text-decoration: none;
     margin-bottom: 20px;
 }
 
-.achievements {
+.projects {
     margin-bottom: 20px;
 }
 
@@ -376,7 +401,7 @@ span a {
 }
 
 .hover-phone:hover {
-    width: 100px;
+    width: 125px;
     height: 50px;
 }
 
