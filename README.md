@@ -6,7 +6,7 @@ Below is a diagram detailing the architecture I have utilised in this project:
 
 ![Project Architecture](./resume-arch.drawio.png)
 
-Teck-stack:
+Tech-stack:
 - S3
 - AWS CloudFront
 - Certificate Manager
