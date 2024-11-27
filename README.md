@@ -10,10 +10,11 @@ Tech-stack:
 - S3
 - AWS CloudFront
 - Certificate Manager
-- AWS Lambda
-- DynamoDB
-- Terraform
-- Github Actions
+- AWS Lambda, Python
+- DynamoDB, Java
+- Terraform, HCL, JSON
+- Github Actions, YML
+- HTML, CSS, JavaScript
 
 ## Links for Cloud Resume Challenge
 - My cloud resume challenge: https://www.toddblakeman.co.uk/
