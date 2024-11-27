@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <title>Todd Blakeman CV</title>
+    <title>Todd Blakeman</title>
     <link rel="icon" href="./img/cv.png" type="image/x-icon">
 </head>
 
@@ -26,6 +26,9 @@
                 <li class="off-screen-menu-btn-2">
                     <a href="./resume/TB CV.pdf" target="_blank" class="nav-link">Resume (pdf)</a>
                 </li>
+                <li class="off-screen-menu-btn-3">
+                    <a href="./projects.html" class="nav-link">Projects</a>
+                </li>
             </ul>
         </div>
         <nav class="navbar">
@@ -36,6 +39,9 @@
                 </li>
                 <li class="navbar-btn-2">
                     <a href="./resume/TB CV.pdf" target="_blank" class="nav-link">Resume (pdf)</a>
+                </li>
+                <li>
+                    <a href="./projects.html" class="nav-link">Projects</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -55,6 +61,7 @@
                 <img class="img-me" src="./img/me.jpg">
             </div>
             <div class="counter-number"></div>
+            <p class="page-view-count">Page view count</p>
             <div class="counter-digits">
                 <div class="digit" id="digit1">
                     <div class="top">0</div>
@@ -73,173 +80,58 @@
                     <div class="bottom">0</div>
                 </div>
             </div>
-            <p class="page-view-count">Page view count</p>
+
             <div class="scroll-down">
                 <img class="scroll-down-img" src="./img/chevron.png">
             </div>
         </section>
-
-        <div class="border">
-        </div>
-
+                    
         <section class="profile" id="profile">
-            <div class="section-title">Profile</div>
-            <p>As an accomplished IT Engineer with over 5 years of hands-on experience in the industry, 
-                I have honed a robust skill set in system administration, network management, and IT support. My expertise includes managing complex IT infrastructures, 
-                troubleshooting critical issues, and ensuring optimal system performance. Driven by a passion for technology and continuous improvement, I am now eager to transition 
-                into the dynamic field of cloud engineering. Leveraging my extensive background in IT, combined with a deep interest in cloud technologies, 
-                I am committed to delivering innovative cloud solutions that enhance scalability, security, and efficiency. I am most proficient in AWS and Azure platforms 
-                and continuously expand my knowledge through personal education.</p>
+            <div class="section-title">About Me</div>
+            <p class="section-p">I am an accomplished IT Engineer with over 5 years of hands-on experience in the industry. I have developed a strong skill set in system administration, network management, and IT support. My expertise lies in managing complex IT infrastructures, troubleshooting critical issues, and ensuring optimal system performance. Driven by my passion for technology and continuous improvement, I am eager to transition into the dynamic field of cloud engineering. With my extensive background in IT and a deep interest in cloud technologies, I am committed to delivering innovative cloud solutions that enhance scalability, security, and efficiency. I am most proficient in AWS and strive to continuously expand my knowledge through self-education.</p>
         </section>
 
-        <div class="line">
-        </div>
-    
         <section class="projects">
             <div class="section-title">Projects</div>
-            <h3>AWS Cloud Resume Challenge</h3>
-            <p>You are here! This resume website is the result of the Cloud Resume Challenge project. I actively continue to work on this page and improve it as my skills continue to advance!</p>
-            <p>
-                I successfully completed the AWS Cloud Resume Challenge, demonstrating proficiency in a wide range of AWS services and modern web technologies. 
-                This project involved deploying a personal resume website utilizing EC2 for hosting, S3 for static file storage, and CloudFront for content delivery. 
-                I incorporated HTML, CSS, and JavaScript for the front-end development and used Terraform for infrastructure as code. Additionally, 
-                I implemented serverless functions with AWS Lambda, utilized DynamoDB for database management, and secured the site with AWS Certificate Manager. 
-                I also managed external DNS hosting to ensure seamless domain integration. For source code control, I leveraged Git and GitHub, and I used 
-                GitHub Actions to implement CI/CD pipelines, ensuring efficient and automated deployment processes.
-            </p>
+            <div class="project-tiles">
+                <div class="project-box">
+                    <h3>AWS Cloud Resume Challenge</h3>
+                    <p>You are here! This resume website is the result of the Cloud Resume Challenge project. I actively continue to work on this page and improve it as my skills continue to advance!</p>
+                    <a href="projects.html#aws-cloud-resume">
+                        <img src="./img/website.png">
+                    </a>
+                </div>
         </section>
-
-        <div class="line" id="profile-skills">
-        </div>
-    
-        <section class="skills">
-            <div class="section-title">Key Skills</div>
-            <ul>
-                <li>Azure & Office 365</li>
-                <li>All Microsoft Server environments</li>
-                <li>Advanced Networking</li>
-                <li>Windows Domain environments</li>
-                <li>Windows 7, 8, 8.1, 10 & 11</li>
-                <li>AWS (EC2, S3, VPC, EBS, ELB, Route53, RDS, IAM, Lambda, CloudFront)</li>
-                <li>Linux</li>
-                <li>Terraform</li>
-                <li>GIT, GitHub</li>
-                <li>CICD (Jenkins, GitHub Actions)</li>
-                <li>Containerization (Kubernetes, Docker)</li>
-                <li>Hyper-V/VMware</li>
-                <li>Firewall/Router/Switch Configuration</li>
-                <li>Disaster Recovery Solutions</li>
-                <li>General PC, Laptop, Mobile Device repair & maintenance</li>
-                <li>On-site support and customer service</li>
-                <li>VoIP/SIP/Cloud PBX Systems</li>
-                <li>Terminal Servers/RDS/RDP</li>
-                <li>Broadband services (Leased Lines, ADSL/VDSL/FTTP)</li>
-                <li>MacOS, iOS</li>
-                <li>A variety of MSP ticketing and monitoring systems</li>
-                <li>Knowledge of HTML, CSS & JavaScript</li>
-            </ul>
-        </section>
-
-        <div class="line">
-        </div>
-    
-        <section class="experience">
-            <div class="section-title">Experience</div>
-            <p>
-                <span class="job-title">Computer Friendly Consultants Ltd</span> <span class="job-period">(January 2022 – Present)</span><br>
-                During my tenure at CFC, I successfully navigated and thrived in increasingly complex environments and advanced technologies. 
-                By frequently working with routers and networking equipment through both GUIs and CLIs, I significantly expanded my expertise in networking and computing. 
-                This hands-on experience not only deepened my technical knowledge but also introduced innovative methods for system interaction and management. 
-                My proactive approach and ability to adapt to new challenges have driven tangible improvements in system efficiency and reliability.
-                At CFC, I play a pivotal role in the company’s strong emphasis on Disaster Recovery (DR), ensuring clients are safeguarded against data loss incidents of any scale. 
-                For the first time, I had the opportunity to interact with and configure in-depth, enterprise-grade DR solutions. 
-                This experience honed my focus on data security and the protection of clients' infrastructure and core systems. 
-                It significantly enhanced my understanding of cybersecurity procedures and advanced methods, enabling me to implement robust solutions that better protect our clients.
-                I frequently visit clients' workplaces, including commercial offices and residential settings, to install new hardware and troubleshoot issues that cannot be resolved 
-                remotely. By managing my own schedule, I have gained significant autonomy, allowing me to optimize customer relations and deliver hands-on support effectively. 
-                This role has enhanced my ability to operate independently, foster strong client relationships, and provide timely, high-quality technical solutions.
-            </p>
-    
-            <p>
-                <span class="job-title">IT Support Engineer, Mellow Marsh Software Ltd</span> <span class="job-period">(August 2019 – December 2021)</span><br>
-                Working within an MSP environment involved taking calls throughout the day while also managing fast-paced ticket queues and incoming emails. 
-                Successfully liaising with companies from various professional backgrounds enabled me to work with different technologies and software, allowing me to adapt to 
-                different client needs, improve my skillset, and broaden my knowledge of the IT industry. Exposure to PBX Phone systems and Telephony technologies inspired me 
-                to dive into these kinds of problems head-on to develop less experienced aspects of my skillset.
-            </p>
-    
-            <p>
-                <span class="job-title">Service Desk Analyst, Advanced</span> <span class="job-period">(January 2019 – August 2019)</span><br>
-                The remote nature of working on a service desk required the ability to troubleshoot and communicate effectively, as there were times when I could not 
-                visually see the issue. Communicating with individuals at various IT skill levels made excellent customer service an essential part of my skillset.
-            </p>
-    
-            <p>
-                <span class="job-title">Operational Support Grade, HMP Featherstone</span> <span class="job-period">(May 2016 - January 2019)</span><br>
-            </p>
-    
-            <p>
-                <span class="job-title">Crew Member, McDonald’s</span> <span class="job-period">(May 2014 - May 2016)</span><br>
-            </p>
-        </section>
-
-        <div class="line">
-        </div>
-    
-        <section class="education">
-            <div class="section-title">Education</div>
-            <p><strong>Stafford College</strong> (2012-2014)<br>
-            BTEC Level 3 Diploma Sports & Exercise Sciences</p>
-            <p><strong>Cannock Chase High School</strong> (2008-2012)<br>
-            GCSE’s:
-                <ul>
-                    <li>PE – A</li>
-                    <li>English Literature – B</li>
-                    <li>English Language – B</li>
-                    <li>Mathematics – B</li>
-                    <li>Core Sciences – B</li>
-                    <li>Additional Sciences – B</li>
-                    <li>History – C</li>
-                    <li>Graphic Design – C</li>
-                    <li>BTEC Sport – D*</li>
-                </ul>
-            </p>
-        </section>
-    </section>
-
     </article>
+</body>
 
-    <div class="border">
+<!-- Footer -->
+<footer class="footer" id="footer">
+    <div class="contact">
+        <span class="email-link">
+            <a  href="mailto:todd_blakeman@hotmail.com">
+            <img src="./img/email.png">
+            </a>
+        </span>
+        <span class="linkedin">
+            <a href="https://www.linkedin.com/in/todd-blakeman-a55647171" target="_blank">
+                <img src="./img/linkedin-logo.png">
+            </a>
+        </span>
+        <span class="github">
+             <a href="https://github.com/stars/ToddBlakeman/lists/projects" target="_blank">
+                <img src="./img/github-sign.png">
+            </a>
+        </span>
+        <span class="phone-number">
+               <img src="./img/phone-call.png" class="hover-phone" onmouseover="this.src='./img/Number.png';" onmouseout="this.src='./img/phone-call.png';">
+        </span>
+        <span class="location">
+            <img src="./img/home.png" class="hover-address" onmouseover="this.src='./img/Address.png';" onmouseout="this.src='./img/home.png';">
+        </span>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-        <div class="contact">
-            <span class="email-link">
-                <a  href="mailto:todd_blakeman@hotmail.com">
-                <img src="./img/email.png">
-                </a>
-            </span>
-            <span class="linkedin">
-                <a href="https://www.linkedin.com/in/todd-blakeman-a55647171" target="_blank">
-                    <img src="./img/linkedin-logo.png">
-                </a>
-            </span>
-            <span class="github">
-                <a href="https://github.com/stars/ToddBlakeman/lists/projects" target="_blank">
-                    <img src="./img/github-sign.png">
-                </a>
-            </span>
-            <span class="phone-number">
-                <img src="./img/phone-call.png" class="hover-phone" onmouseover="this.src='./img/Number.png';" onmouseout="this.src='./img/phone-call.png';">
-            </span>
-            <span class="location">
-                <img src="./img/home.png" class="hover-address" onmouseover="this.src='./img/Address.png';" onmouseout="this.src='./img/home.png';">
-            </span>
-        </div>
-    </footer>
+</footer>
 
     <script src="./js/main.js"></script>
     <script src="./js/views.js"></script>
-</body>
 </html>
