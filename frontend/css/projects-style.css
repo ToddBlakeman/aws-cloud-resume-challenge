@@ -1,0 +1,340 @@
+/* ------------------------- Main Body Styles ------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #000;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 5px;
+    border: solid 1px #000;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #F9F9F9;
+    background-color: #597445;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+a {
+text-decoration: none;
+}
+
+/* ------------------------- Navbar Styles ------------------------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #597445;
+    color: #F9F9F9;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.navbar a {
+    color: #F9F9F9;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.7s;
+    border-radius: 25px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 25px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 1rem;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.4s ease-in-out;
+    border-radius: 25px;
+}
+
+
+
+/* ------------------------- Off Screen Menu ------------------------- */
+.off-screen-menu {
+    background-color: #597445;
+    height: 30vh;
+    width: 100%;
+    max-width: 700px;
+    position: fixed;
+    top: 0;
+    right: -700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.4s ease;
+}
+
+.off-screen-menu-list li {
+    color: #F9F9F9;
+    font-size: 1rem;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.7s;
+    border-radius: 25px;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+
+
+/* ------------------------- Responsive Styles ------------------------- */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 9;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+    }
+
+    .hamburger.active + .nav-menu {
+        display: block;
+    }
+
+    .nav-menu, .hamburger {
+        width: auto;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu li {
+        margin: 0;
+        text-align: center;
+        padding: 1rem 0;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .nav-menu li a:hover {
+        color: #E7F0DC;
+    }
+
+    .bar {
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Optional: Style for the hamburger bars */
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 2px auto;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    /* Optional: Transformations for the active state */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Transition for a smoother effect */
+    .nav-menu, .hamburger .bar {
+        transition: all 0.5s ease;
+    }
+}
+
+
+
+/* ------------------------- Main Content Styles ------------------------- */
+
+.projects {
+    background-color: #597445;
+    color: #000;
+}
+
+.projects-title {
+    font-weight: bold;
+    font-size: 4em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.projects-p {
+    font-weight: bold;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #000;
+    padding-bottom: 4%;
+    padding-top: 1%;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #000;
+}
+
+.section-p {
+    font-weight: bold;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #000;
+}
+
+#github-links:hover {
+    text-decoration: underline;
+}
+
+.aws-cloud-resume-section {
+    background-color: #F9F9F9;
+    padding-top: 3%;
+}
+
+.aws-cloud-resume-section img {
+    background-color: #597445;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+
+.footer {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    align-items: center;
+    background-color: #597445;
+}
+
+.contact {
+    max-width: 80%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+span a {
+    border: 0px;
+}
+
+.email-link img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+}
+
+.hover-phone {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+    transition: width 0.3s ease, height 0.3s ease, background-image 0.3s ease;
+}
+
+.hover-phone:hover {
+    width: 125px;
+    height: 50px;
+}
+
+.location img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+}
+
+.hover-address {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+    transition: width 0.3s ease, height 0.3s ease, background-image 0.3s ease;
+}
+
+.hover-address:hover {
+    width: 125px;
+    height: 50px;
+}
+
+.linkedin img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+}
+
+.github img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5%;
+}
