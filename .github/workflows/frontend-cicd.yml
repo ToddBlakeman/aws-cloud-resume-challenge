@@ -1,4 +1,4 @@
-name: Upload website to S3
+name: Upload Website to S3
 
 on:
   push:
@@ -9,10 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: jakejarvis/s3-sync-action@master
+      # Step 1: Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Sync files to the S3 bucket
+      - name: Sync files to S3
+        uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl private --follow-symlinks --delete
+          args: --acl public-read --follow-symlinks --delete
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
