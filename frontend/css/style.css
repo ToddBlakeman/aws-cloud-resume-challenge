@@ -100,12 +100,12 @@ text-decoration: none;
 /* ------------------------- Off Screen Menu ------------------------- */
 .off-screen-menu {
     background-color: #597445;
-    height: 30vh;
-    width: 100%;
-    max-width: 700px;
+    height: 65%;
+    width: 110%;
+    max-width: 900px;
     position: fixed;
     top: 0;
-    right: -700px;
+    right: -900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -236,8 +236,8 @@ text-decoration: none;
 .img-me {
     border-radius: 50%;
     border: 4px solid #ddd; 
-    width: 25rem;
-    height: 25rem;
+    width: 40vh;
+    height: 40vh;
     margin-top: 1%;
     box-shadow: 0 6px 10px #000;
 }
@@ -375,7 +375,7 @@ text-decoration: none;
     gap: 20px;                          /* Space between tiles */
     justify-content: center;            /* Center the grid horizontally */
     align-items: center;                /* Align items vertically in their rows */
-    max-width: 900px;                   /* Limit the total width for centering */
+    max-width: 100%;                   /* Limit the total width for centering */
     margin: 0 auto;                     /* Center the grid container */
 }
 
@@ -385,7 +385,7 @@ text-decoration: none;
     border-radius: 8px;                 /* Rounded corners */
     padding: 15px;                      /* Padding inside the tile */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    width: 100%;                        /* Flexible width for responsiveness */
+    width: 90%;                        /* Flexible width for responsiveness */
     max-width: 800px;                   /* Limit max width per tile */
     text-align: center;                 /* Center text inside tiles */
     transition: transform 0.3s ease;    /* Smooth hover effect */
