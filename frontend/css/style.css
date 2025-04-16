@@ -375,7 +375,7 @@ text-decoration: none;
     gap: 20px;                          /* Space between tiles */
     justify-content: center;            /* Center the grid horizontally */
     align-items: center;                /* Align items vertically in their rows */
-    max-width: 100%;                   /* Limit the total width for centering */
+    max-width: 1200px;                   /* Limit the total width for centering */
     margin: 0 auto;                     /* Center the grid container */
 }
 
@@ -386,9 +386,10 @@ text-decoration: none;
     padding: 15px;                      /* Padding inside the tile */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     width: 90%;                        /* Flexible width for responsiveness */
-    max-width: 800px;                   /* Limit max width per tile */
+    max-width: 1000px;                   /* Limit max width per tile */
     text-align: center;                 /* Center text inside tiles */
     transition: transform 0.3s ease;    /* Smooth hover effect */
+    margin-bottom: 3%;
 }
 
 .project-box h3 {
@@ -414,7 +415,6 @@ text-decoration: none;
 }
 
 .footer {
-    padding-top: 3%;
     padding-bottom: 2%;
     align-items: center;
     background-color: #597445;
@@ -443,7 +443,7 @@ span a {
     width: 50px;
     height: 50px;
     padding-right: 5%;
-    transition: width 0.3s ease, height 0.3s ease, background-image 0.3s ease;
+    transition: width 0.8s ease, height 0.8s ease, background-image 0.8s ease;
 }
 
 .hover-phone:hover {
@@ -461,7 +461,7 @@ span a {
     width: 50px;
     height: 50px;
     padding-right: 5%;
-    transition: width 0.3s ease, height 0.3s ease, background-image 0.3s ease;
+    transition: width 0.8s ease, height 0.8s ease, background-image 0.8s ease;
 }
 
 .hover-address:hover {
