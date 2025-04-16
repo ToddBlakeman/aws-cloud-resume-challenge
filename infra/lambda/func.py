@@ -30,45 +30,27 @@ import json
 import boto3
 from datetime import datetime
 
-# Initialize a DynamoDB resource
+# Initialize S3 client
+s3_client = boto3.client('s3')
+
+# S3 bucket name
+bucket_name = 'website-visit-logs-8375'  # Replace with your S3 bucket name
+
+# Specify the view count table
 dynamodb = boto3.resource('dynamodb')
-
-# Specify the table
-table = dynamodb.Table('view-count-ddb')
-
-# Set up SES client for email notifications
-ses_client = boto3.client('ses')
-
-def send_email(subject, body):
-    # Replace with your SES verified email addresses
-    response = ses_client.send_email(
-        Source='your-email@example.com',  # Verified sender
-        Destination={
-            'ToAddresses': ['your-email@example.com'],  # Replace with your email
-        },
-        Message={
-            'Subject': {
-                'Data': subject
-            },
-            'Body': {
-                'Text': {
-                    'Data': body
-                }
-            }
-        }
-    )
+views_table = dynamodb.Table('view-count-ddb')  # Replace with your views table name
 
 def lambda_handler(event, context):
-    # Fetch the item with 'id' = '0' from DynamoDB
-    response = table.get_item(Key={'id': '0'})
+    # Fetch the item with 'id' = '0' from DynamoDB (view count table)
+    response = views_table.get_item(Key={'id': '0'})
     
     # Extract and increment the views count
     views = response['Item']['views']
     views += 1
     print(f"Updated view count: {views}")
     
-    # Update the DynamoDB table with the new views count
-    table.put_item(Item={
+    # Update the view count table with the new views count
+    views_table.put_item(Item={
         'id': '0',  # Assuming you are updating the same item
         'views': views
     })
@@ -76,18 +58,35 @@ def lambda_handler(event, context):
     # Get the current timestamp
     timestamp = datetime.utcnow().isoformat()
     
-    # Log the visit event in CloudWatch Logs
-    log_message = f"Website visited at: {timestamp} | New views count: {views}"
-    print(log_message)  # This will log to CloudWatch automatically
+    # Prepare the log message
+    log_message = {
+        'timestamp': timestamp,
+        'views_count': views
+    }
     
-    # Send an email notification (optional)
-    send_email("Website Visit Notification", log_message)
+    # Create a log entry as a JSON object
+    log_json = json.dumps(log_message)
+    
+    # Generate the file name using the timestamp
+    file_name = f"visit-log-{timestamp}.json"
+    
+    # Store the log in the S3 bucket
+    s3_client.put_object(
+        Bucket=bucket_name,
+        Key=file_name,
+        Body=log_json,
+        ContentType='application/json'
+    )
+    
+    # Log the visit event in CloudWatch Logs
+    print(f"Website visited at: {timestamp} | New views count: {views}")
     
     # Return the updated views count
     return {
         'statusCode': 200,
         'body': json.dumps({
-            'message': 'Visit logged, view count updated, and email sent.',
+            'message': 'Visit logged and view count updated.',
             'views': views
         })
     }
+
