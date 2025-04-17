@@ -1,4 +1,3 @@
-"""
 import json
 import boto3
 
@@ -24,8 +23,13 @@ def lambda_handler(event, context):
     })
     
     # Return the updated views count
-    return views"""
+    return views
 
+
+
+
+
+""" TEST CODE
 import json
 import boto3
 from datetime import datetime
@@ -89,4 +93,4 @@ def lambda_handler(event, context):
             'views': views
         })
     }
-
+"""
